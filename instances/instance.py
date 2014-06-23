@@ -46,7 +46,7 @@ class Evaluate(object):
 
 			if self.info['EDGE_WEIGHT_TYPE'] == 'EUC_2D':
 
-				self.edgeDist = [[ sqrt(pow((self.x[i] - self.x[j]),2)+pow((self.y[i] - self.y[j]),2)) for j in range(self.NCity)] for i in range(self.NCity)]
+				self.edgeDist = [[ (sqrt(pow((self.x[i] - self.x[j]),2)+pow((self.y[i] - self.y[j]),2)) + 0.5)  for j in range(self.NCity)] for i in range(self.NCity)]
 			elif self.info['EDGE_WEIGHT_TYPE'] == 'ATT' :
 
 				for i in range(self.NCity):
